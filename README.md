@@ -48,14 +48,34 @@ python manage.py migrate
 
 ### 🔹  Listar todos os livros (GET)
 ```bash
-GET /api/livros/
+GET /blogspot/
 ```
-A API estará disponível em: http://127.0.0.1:5000/
 
-### 🔹 Rodando o Frontend
-
-Abra o arquivo index.html no navegador ou utilize um servidor local:
+### 🔹 Criar um novo livro (POST)
 ```bash
-python -m http.server 8080  # Para rodar localmente
+POST /blogspot/
+{
+    "title": "Dom Quixote",
+    "content": "Livro por Miguel de Cervantes",
+    "published": 1605
+}
 ```
-O frontend estará disponível em: http://127.0.0.1:8080/
+
+### 🔹  Buscar um livro especifico (GET)
+```bash
+GET /blogspot/1/
+```
+
+### 🔹 Atualizar um livro (PUT)
+```bash
+PUT /blogspot/1/
+{
+   "title": "Dom Quixote",
+    "content": "Livro por Miguel de Cervantes",
+    "published": 1615
+}
+```
+### 🔹   Deletar um livro (DELETE)
+```bash
+DELETE /blogspot/1/
+```
